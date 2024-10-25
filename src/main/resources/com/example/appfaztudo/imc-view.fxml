@@ -22,7 +22,8 @@
     <TextField fx:id="textPeso"/>
     <Label>Informe sua altura:</Label>
     <TextField fx:id="textAltura"/>
-    <Button>Calcular IMC</Button>
+    <Button onMouseClicked="#onCalcularIMCButtonClick">Calcular IMC</Button>
     <Label fx:id="labelResultado"/>
+
 
 </VBox>
