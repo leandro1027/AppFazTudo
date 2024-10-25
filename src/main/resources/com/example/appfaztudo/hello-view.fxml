@@ -15,10 +15,10 @@
     <Label>App Faz Tudo!</Label>
     <Button prefWidth="200" onMouseClicked="#onCalcularIMCButtonClick">Calcular IMC</Button>
     <Separator/>
-    <Button prefWidth="200">Conversão de temperatura</Button>
+    <Button prefWidth="200" onMouseClicked="#onConversaoTemperaturaButtonClick">Conversão de temperatura</Button>
     <Separator/>
-    <Button prefWidth="200">Doações</Button>
+    <Button prefWidth="200" onMouseClicked="#onDoacoesButtonClick">Doações</Button>
     <Separator/>
-    <Button prefWidth="200">Sair</Button>
+    <Button prefWidth="200" onMouseClicked="#onSairButtonClick">Sair</Button>
 
 </VBox>
