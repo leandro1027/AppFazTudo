@@ -6,6 +6,7 @@ public class HelloController {
 
     @FXML
     protected void onCalcularIMCButtonClick(){
+        new JanelaIMC();
 
     }
 
