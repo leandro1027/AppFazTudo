@@ -1,5 +1,6 @@
 package com.example.appfaztudo;
 
+import com.example.appfaztudo.model.Util;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -18,8 +19,7 @@ public class IMCController {
    protected void onCalcularIMCButtonClick(){
         double peso = Double.parseDouble(textPeso.getText());
         double altura = Double.parseDouble(textAltura.getText());
-        double imc = peso/(altura*altura);
-        labelResultado.setText("Seu IMC:" + imc);
+        labelResultado.setText("Seu IMC:" + Util.calculaIMC(peso, altura));
 
    }
 }
