@@ -1,5 +1,6 @@
 package com.example.appfaztudo;
 
+import com.example.appfaztudo.model.Util;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
@@ -10,11 +11,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class ConversaoTemperaturaController implements Initializable {
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        String[] itens = {"Kelvin", "Fahrenheit"};
-        comboMetrica.getItems().addAll(itens);
-    }
 
     @FXML
     private TextField textValorCelsius;
@@ -26,11 +22,21 @@ public class ConversaoTemperaturaController implements Initializable {
     @FXML
     protected void onConverterButtonClick(){
         double resultado = 0.0;
-        double ValoremCelsius = Double.parseDouble(textValorCelsius.getText());
+        double valor = Double.parseDouble(textValorCelsius.getText());
         if (comboMetrica.getValue().equals("Kelvin")){
-            labelResultado.setText(Uti);
+            resultado = Util.converterCelsiusParaKelvin(valor);
+            labelResultado.setText("Temperatura Kelvin: " + resultado);
         }else if (comboMetrica.getValue().equals("Fahrenheit")){
+            resultado = Util.converterCelsiusParaFahrenheit(valor);
+            labelResultado.setText("Temperatura Fahrenheit: " + resultado);
 
         }
+
     }
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        String[] itens = {"Kelvin", "Fahrenheit"};
+        comboMetrica.getItems().addAll(itens);
+    }
+
 }

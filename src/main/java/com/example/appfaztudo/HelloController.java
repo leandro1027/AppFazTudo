@@ -19,7 +19,6 @@ public class HelloController {
 
     @FXML
     protected  void onDoacoesButtonClick(){
-
     }
 
     @FXML
