@@ -13,8 +13,8 @@ public class HelloController {
     }
 
     @FXML
-    protected void onConversaoTemperaturaButtonClick(){
-
+    protected void onConversaoTemperaturaButtonClick() throws IOException {
+       new JanelaConversaoTemperatura();
     }
 
     @FXML
